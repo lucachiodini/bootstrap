@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thor: Hijos Perdidos – Sitio Web</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #0c0c0c;
+      color: #f5e9c9;
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #845f2c;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #f5e9c9;
+      font-weight: bold;
+    }
+    nav a:hover { color: #d5b16c; }
+
+    .section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: #d5b16c;
+    }
+
+    .frame {
+      border: 8px solid #7a552e;
+      padding: 10px;
+      background: #1a1a1a;
+      border-radius: 8px;
+    }
+
+    iframe {
+      width: 640px;
+      height: 480px;
+      border: none;
+      display: block;
+      margin: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      margin-top: 40px;
+      border-top: 2px solid #845f2c;
+    }
+  </style>
+
+  <script>
+    function showSection(id) {
+      document.getElementById("home").style.display = "none";
+      document.getElementById("about").style.display = "none";
+      document.getElementById("play").style.display = "none";
+      document.getElementById(id).style.display = "block";
+      window.scrollTo(0,0);
+    }
+  </script>
+</head>
+
+<body onload="showSection('home')">
+
+<header>
+  <h1>⚡ Thor: Hijos Perdidos</h1>
+  <nav>
+    <a href="#" onclick="showSection('home')">Inicio</a>
+    <a href="#" onclick="showSection('about')">Proyecto</a>
+    <a href="#" onclick="showSection('play')">Jugar</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="section">
+  <h2>La Aventura Gráfica</h2>
+  <p>
+    "Thor: Hijos Perdidos" es una aventura gráfica interactiva desarrollada en p5.js.
+    El jugador toma decisiones siguiendo la historia donde Thor debe rescatar a sus hijos Magni y Modi,
+    raptados por Loki. Tu recorrido puede llevarte a tres finales posibles: Heroico, Trágico o Neutral.
+  </p>
+  <div class="frame">
+    <img src="img1.png" width="100%" alt="Preview" />
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section" style="display:none;">
+  <h2>Sobre el Proyecto</h2>
+
+  <p>
+    El juego está basado completamente en ilustraciones con estética nórdica, tonos sepia y marcos de estilo antiguo.
+    Fue programado con un sistema de pantallas, decisiones encadenadas y finales múltiples.
+  </p>
+
+  <h3>Proceso de Producción</h3>
+  <ul>
+    <li>Diseño narrativo y estructura de decisiones.</li>
+    <li>Creación de 15 ilustraciones + 3 finales.</li>
+    <li>Implementación completa en p5.js (640x480).</li>
+    <li>Sonido, música, interfaz y pantalla de créditos.</li>
+  </ul>
+
+  <h3>Integrantes</h3>
+  <ul>
+    <li><strong>Luca Chiodini</strong> (Legajo 122655/3)</li>
+    <li><strong>Tomás Lopes Vasquez</strong> (Legajo 122760/3)</li>
+  </ul>
+</section>
+
+<!-- PLAY -->
+<section id="play" class="section" style="display:none;">
+  <h2>Jugar la Aventura</h2>
+  <p>La app fue desarrollada íntegramente en p5.js. Hacé clic dentro del juego para activar el sonido.</p>
+
+  <div class="frame">
+    <iframe src="historia.html"></iframe>
+  </div>
+</section>
+
+<footer>
+  Trabajo Final – Aventura Gráfica Interactiva – p5.js
+</footer>
+
+</body>
+</html>
