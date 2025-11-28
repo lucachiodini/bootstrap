@@ -23,7 +23,7 @@ function preload() {
   imagenes["finaltragico"] = loadImage("Data/finaltragico.png");
   imagenes["finalheroico"] = loadImage("Data/finalheroico.png");
   imagenes["finalneutral"] = loadImage("Data/finalneutral.png");
-  musicaFondo = loadSound('Data/musicaFondo.mp3');
+  musicaFondo = loadSound('Data/musicafondo.mp3');
 }
 
 function setup() {
@@ -326,6 +326,7 @@ function mousePressed() {
     musicaFondo.loop(); 
   }
  } 
+
 
 
 
